@@ -1,0 +1,115 @@
+$primary: #372A77; /* use a dark color! */
+$dark-pastel-red: #A72C35;
+
+.hexSlider svg polygon, .slideImage {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.hexSlider svg .hexy{
+  fill: white;
+  stroke: white;
+  stroke-width: 0.1px;
+  opacity: .0;
+}
+
+.hexSlider svg .hexy:hover {
+  opacity: .2;
+}
+
+.hexRed svg polygon{
+  fill: $dark-pastel-red;
+}
+.hexRed svg polygon:hover{
+  fill: lighten($dark-pastel-red,10%);
+}
+
+.hexyLight0 {
+  fill: lighten($primary,10%);
+}
+.hexyLight0:hover {
+  fill: lighten($primary,15%);
+}
+.hexyLight1 {
+  fill: lighten($primary,20%);
+}
+.hexyLight1:hover {
+  fill: lighten($primary,25%);
+}
+.hexyLight2 {
+  fill: lighten($primary,30%);
+}
+.hexyLight2:hover {
+  fill: lighten($primary,35%);
+}
+.hexyLight3 {
+  fill: lighten($primary,40%);
+}
+.hexyLight3:hover {
+  fill: lighten($primary,45%);
+}
+
+.hexSlider{
+  position: relative;
+  width:100%;
+}
+
+.slideDivText {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+}
+
+.hidden {
+  display:none;
+}
+
+.slideDivImage{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 0;
+}
+
+.slideImage {
+    width:100%;
+
+}
+
+.hexSlider svg{
+  position: relative;
+  z-index: 1;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+@media screen and (min-width: 720px) {
+  .slideDivText {
+    bottom: 112px;
+    weight: 112px;
+  }
+
+  .slideDivImage{
+    padding: 30px 18px 12px 18px;
+  }
+
+}
+
+@media screen and (min-width: 1260px) {
+  .slideDivText {
+    bottom: 200px;
+    weight: 200px;
+  }
+
+  .slideDivImage{
+    padding: 40px 18px 12px 18px;     	
+  }
+
+}
+
