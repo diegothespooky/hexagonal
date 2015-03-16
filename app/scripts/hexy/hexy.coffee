@@ -8,6 +8,11 @@ lastSlide = 0
 $(window).load ->
   loadSlider()
   loadColumns()
+  loadTest()
+  $(".testDiv svg polygon").each (index, element) =>
+    lastClass = $(element).attr("class")
+    if lastClass is "hexyLight0"
+      $(element).remove()
 
 loadSlider = ->
   $.ajax "../../images/hex23x9.svg",
@@ -46,4 +51,12 @@ loadColumns = ->
     success: (data)->
        $(".hex5x6").append( data.children[0].outerHTML )
     async: false 
+
+loadTest = ->
+  $.ajax "../../images/hex24x10.svg",
+    type: "GET"
+    success: (data)->
+       $(".testDiv").append( data.children[0].outerHTML )
+    async: false 
+
 

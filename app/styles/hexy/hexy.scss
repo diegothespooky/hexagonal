@@ -1,6 +1,10 @@
 $primary: #372A77; /* use a dark color! */
 $dark-pastel-red: #A72C35;
 
+.hexBackground {
+  fill: darken($primary,10%);
+}
+
 .hexSlider svg polygon, .slideImage {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -89,7 +93,14 @@ $dark-pastel-red: #A72C35;
   bottom: 0px;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 650px) {
+  body {
+    background-image: url('../../images/hexBack0.png'),url('../../images/hexBack1.png');
+    background-repeat: repeat-x;
+    background-position: 50% 100%, 50% 0%;
+    background-size: 1140px 514px;
+  }
+
   .slideDivText {
     bottom: 112px;
     weight: 112px;
@@ -111,5 +122,12 @@ $dark-pastel-red: #A72C35;
     padding: 40px 18px 12px 18px;     	
   }
 
+}
+
+
+@media screen and (max-width: 649px) {
+  .hexSlider{
+    display:none;
+  }
 }
 
